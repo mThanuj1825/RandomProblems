@@ -41,12 +41,6 @@ def solve(n: int, m: int, grid: List[List[str]]) -> int:
     return max_time
 
 
-n, m = 2, 2
-grid = [
-    ["A", "E"],
-    ["E", "E"]
-]
-
 tests = {
     1: {
         "n": 2,

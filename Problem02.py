@@ -3,7 +3,6 @@ Find the minimum size of a subset S of A which satisfy the following conditions:
 -> Let the product of the subset be S be equal to P
 -> P must be divisible by X
 """
-import time
 from typing import List
 
 
@@ -41,14 +40,9 @@ tests = {
 
 for key in tests:
     test = tests[key]
-    start = time.time()
     result = solve(test["n"], test["x"], test["arr"])
-    end = time.time()
 
-    print(f"Test {key}: ", end="")
     if result == test["res"]:
         print("Passed")
     else:
         print("Failed")
-
-    print(f"Time: {(end - start)}")

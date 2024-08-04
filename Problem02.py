@@ -9,18 +9,32 @@ from typing import List
 def solve(n: int, x: int, arr: List[int]) -> int:
     min_size = float("inf")
 
-    for i in range(1, 1 << n):
-        prod = 1
-        ss = 0
-        for j in range(n):
-            if i & (1 << j):
-                prod *= arr[j]
-                ss += 1
+    # For all subarrays
+    # for i in range(1 << n):
+    #     prod = 1
+    #     ss = 0
+    #     for j in range(n):
+    #         if i & (1 << j):
+    #             prod *= arr[j]
+    #             ss += 1
+    #
+    #     if prod % x == 0:
+    #         min_size = min(min_size, ss)
+    #
 
-        if prod % x == 0:
-            min_size = min(min_size, ss)
-
-    return min_size
+    # For contigous subarrays
+    # prod = 1
+    # left = 0
+    #
+    # for right in range(n):
+    #     prod *= arr[right]
+    #
+    #     while prod % x == 0 and left <= right:
+    #         min_size = min(min_size, right - left + 1)
+    #         prod //= arr[left]
+    #         left += 1
+    #
+    # return min_size
 
 
 tests = {
